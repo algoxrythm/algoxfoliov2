@@ -5,8 +5,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 const skills = [
   { name: "Robotics", description: "ROS2, CAD, FEA, Automation Systems" },
   { name: "AI/ML", description: "YOLOv8, TensorFlow, PyTorch, Neural Networks" },
-  { name: "Programming", description: "Python, C++, Data Structures & Algorithms" },
-  { name: "Leadership", description: "Project Management, Collaboration, Mentorship" },
+  { name: "Programming", description: "Python, Data Structures & Algorithms" },
+  { name: "Leadership", description: "Project Management, Collaboration, Mentorship, Team Lead" },
 ];
 
 export const Hero = () => {
@@ -45,14 +45,14 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-        <h1 className="font-orbitron text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
+        <h1 className="font-orbitron text-5xl md:text-7xl font-bold mb-4 animate-slide-in-bottom" /* CHANGED */ >
           <span className="text-foreground">PRANAV</span>{" "}
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
             PATIL
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in font-light">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slide-in-bottom font-light" style={{ animationDelay: "0.2s" }} /* CHANGED */ >
           Building Intelligent Systems At The Intersection Of{" "}
           <span className="text-primary">Machines</span>,{" "}
           <span className="text-accent">Code</span> &{" "}
@@ -64,10 +64,11 @@ export const Hero = () => {
           {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className="group relative animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative animate-slide-in-bottom" /* CHANGED */
+              style={{ animationDelay: `${0.4 + index * 0.1}s` }}
             >
-              <div className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300 cursor-pointer hover:scale-105 animate-float-slow"
+              <div
+                className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary transition-all duration-300 cursor-pointer hover:scale-105 animate-subtle-pulse" /* CHANGED */
                 style={{ animationDelay: `${index * 0.8}s` }}
               >
                 <h3 className="font-orbitron font-bold text-primary mb-2">
@@ -82,7 +83,7 @@ export const Hero = () => {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-in-bottom" style={{ animationDelay: "0.8s" }} /* CHANGED */>
           <Button
             size="lg"
             className="font-orbitron font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(0,240,255,0.5)] hover:shadow-[0_0_30px_rgba(0,240,255,0.8)] transition-all"
