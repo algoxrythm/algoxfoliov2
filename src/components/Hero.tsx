@@ -52,11 +52,11 @@ export const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in font-orbitron font-light">
-          Engineering the Future Across{" "}
-          <span className="text-primary">Robotics</span>,{" "}
-          <span className="text-accent">AI</span>, and{" "}
-          <span className="text-secondary">Beyond</span>
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in font-light">
+          Building Intelligent Systems At The Intersection Of{" "}
+          <span className="text-primary">Machines</span>,{" "}
+          <span className="text-accent">Code</span> &{" "}
+          <span className="text-secondary">Imagination</span>
         </p>
 
         {/* Floating skill keywords */}
@@ -67,8 +67,8 @@ export const Hero = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300 cursor-pointer hover:scale-105 animate-float"
-                style={{ animationDelay: `${index * 0.5}s` }}
+              <div className="p-6 rounded-lg border border-primary/30 bg-card/50 backdrop-blur-sm hover:border-primary hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300 cursor-pointer hover:scale-105 animate-float-slow"
+                style={{ animationDelay: `${index * 0.8}s` }}
               >
                 <h3 className="font-orbitron font-bold text-primary mb-2">
                   {skill.name}

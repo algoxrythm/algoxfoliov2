@@ -33,16 +33,16 @@ const timelineEvents = [
 
 export const Timeline = () => {
   return (
-    <section id="timeline" className="py-20 px-4 bg-background">
-      <div className="max-w-4xl mx-auto">
+    <section id="timeline" className="py-32 px-4 bg-background">
+      <div className="max-w-5xl mx-auto">
         <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-center mb-4">
           Journey <span className="text-primary">Timeline</span>
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-16"></div>
+        <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto mb-20"></div>
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-secondary"></div>
+          <div className="absolute left-10 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-secondary"></div>
 
           {timelineEvents.map((event, index) => {
             const Icon = event.icon;
@@ -51,19 +51,19 @@ export const Timeline = () => {
             return (
               <div
                 key={event.title}
-                className={`relative mb-12 animate-fade-in ${
+                className={`relative mb-20 animate-fade-in ${
                   isEven ? "md:pr-1/2" : "md:pl-1/2"
                 }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className={`flex items-center gap-4 ${isEven ? "md:flex-row-reverse md:text-right" : ""}`}>
                   {/* Timeline node */}
-                  <div className={`absolute left-8 md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-br ${event.color} flex items-center justify-center border-4 border-background shadow-[0_0_20px_rgba(0,240,255,0.5)] z-10`}>
-                    <Icon className="w-7 h-7 text-background" />
+                  <div className={`absolute left-10 md:left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-gradient-to-br ${event.color} flex items-center justify-center border-4 border-background shadow-[0_0_20px_rgba(0,240,255,0.5)] z-10`}>
+                    <Icon className="w-8 h-8 text-background" />
                   </div>
 
                   {/* Content card */}
-                  <div className={`ml-24 md:ml-0 ${isEven ? "md:mr-12" : "md:ml-12"} flex-1`}>
+                  <div className={`ml-32 md:ml-0 ${isEven ? "md:mr-16" : "md:ml-16"} flex-1`}>
                     <div className="group relative">
                       <div className={`absolute inset-0 bg-gradient-to-br ${event.color} rounded-lg blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
                       

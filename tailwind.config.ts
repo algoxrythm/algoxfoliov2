@@ -65,6 +65,7 @@ export default {
       },
       fontFamily: {
         orbitron: ['Orbitron', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
@@ -86,6 +87,11 @@ export default {
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
+        },
+        "float-slow": {
+          "0%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-15px)" },
+          "100%": { transform: "translateY(0px)" },
         },
         "glow-pulse": {
           "0%, 100%": { 
@@ -114,6 +120,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 6s ease-in-out infinite",
+        "float-slow": "float-slow 8s ease-in-out 3",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in-right": "slide-in-right 0.5s ease-out",
